@@ -15,7 +15,7 @@
 
 
 void test_1b_AdicionarCliente() {
-/*	ParqueEstacionamento p1(3, 5);
+	ParqueEstacionamento p1(3, 5);
 	// Testa se deixa adicionar um novo cliente
 	ASSERT_EQUAL(true, p1.adicionaCliente("Joao"));
 	p1.adicionaCliente("Antonio");
@@ -27,12 +27,12 @@ void test_1b_AdicionarCliente() {
 	// Testa se retorna a posi��o correcta do cliente
 	ASSERT_EQUAL(1, p1.posicaoCliente("Antonio"));
 	// Testa se retorna -1 caso o cliente n�o exista
-	ASSERT_EQUAL(-1, p1.posicaoCliente("Joana"));*/
+	ASSERT_EQUAL(-1, p1.posicaoCliente("Joana"));
 }
 
 
 void test_1c_EntrarParque() {
-/*	ParqueEstacionamento p1(3, 5);
+/*	ParqueEstacionamento p1(3,5);
 	p1.adicionaCliente("Joao");
 	p1.adicionaCliente("Maria");
 	p1.adicionaCliente("Antonio");
@@ -51,7 +51,7 @@ void test_1c_EntrarParque() {
 
 
 void test_1d_RetirarCliente() {
-/*	ParqueEstacionamento p1(3, 5);
+	ParqueEstacionamento p1(3, 5);
 	p1.adicionaCliente("Joao");
 	p1.adicionaCliente("Maria");
 	p1.adicionaCliente("Antonio");
@@ -61,12 +61,12 @@ void test_1d_RetirarCliente() {
 	// Testa se deixa remover cliente que est� fora do parque
 	ASSERT_EQUAL(true, p1.retiraCliente("Antonio"));
 	// Testa se nao deixa remover cliente que nao existe
-	ASSERT_EQUAL(false, p1.retiraCliente("Ana"));*/
+	ASSERT_EQUAL(false, p1.retiraCliente("Ana"));
 }
 
 
 void test_1e_SairParque() {
-/*	ParqueEstacionamento p1(3, 5);
+	ParqueEstacionamento p1(3, 5);
 	p1.adicionaCliente("Joao");
 	p1.adicionaCliente("Maria");
 	p1.adicionaCliente("Rui");
@@ -78,12 +78,12 @@ void test_1e_SairParque() {
 	// Testa se n�o deixa sair um cliente que n�o est� estacionado.
 	ASSERT_EQUAL(false, p1.sair("Maria"));
 	// Testa se n�o deixa sair um cliente que n�o existe.
-	ASSERT_EQUAL(false, p1.sair("Antonio"));*/
+	ASSERT_EQUAL(false, p1.sair("Antonio"));
 }
 
 
 void test_1f_LugaresLotacaoParque() {
-/*	ParqueEstacionamento p1(3, 5);
+	ParqueEstacionamento p1(3, 5);
 	p1.adicionaCliente("Joao");
 	p1.adicionaCliente("Maria");
 	p1.adicionaCliente("Antonio");
@@ -94,7 +94,7 @@ void test_1f_LugaresLotacaoParque() {
 	// Testa se o numero de viaturas presentes no parque est� correcto
 	ASSERT_EQUAL(2, p1.getNumLugaresOcupados());
 	// Testa se o o n�mero de clientes registados no parque est� correcto
-	ASSERT_EQUAL(3, p1.getNumClientesAtuais());*/
+	ASSERT_EQUAL(3, p1.getNumClientesAtuais());
 }
 
 
