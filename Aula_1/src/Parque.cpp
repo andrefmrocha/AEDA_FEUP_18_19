@@ -3,7 +3,8 @@
 
 using namespace std;
 
-ParqueEstacionamento::ParqueEstacionamento(unsigned int lot, unsigned nMaxCli):lotacao(lot), numMaximoClientes(nMaxCli), vagas(nMaxCli){
+ParqueEstacionamento::ParqueEstacionamento(unsigned int lot, unsigned nMaxCli):lotacao(lot), numMaximoClientes(nMaxCli), vagas(lot){
+	cout << lotacao << " " << numMaximoClientes <<  " " << vagas << endl;
 }
 
 unsigned int ParqueEstacionamento::getNumLugares() const{
@@ -40,10 +41,10 @@ bool ParqueEstacionamento::entrar(const string & nome){
 		return false;
 	if(clientes[index].presente == true)
 		return false;
-	cout << vagas;
 	if(vagas==0)
 		return false;
 	clientes[index].presente = true;
+	vagas--;
 	return true;
 }
 

@@ -32,7 +32,7 @@ void test_1b_AdicionarCliente() {
 
 
 void test_1c_EntrarParque() {
-/*	ParqueEstacionamento p1(3,5);
+	ParqueEstacionamento p1(3,5);
 	p1.adicionaCliente("Joao");
 	p1.adicionaCliente("Maria");
 	p1.adicionaCliente("Antonio");
@@ -46,7 +46,7 @@ void test_1c_EntrarParque() {
 	p1.entrar("Joao");
 	p1.entrar("Antonio");
 	// Testa se n�o deixa entrar quando a lota��o est� completa
-	ASSERT_EQUAL(false, p1.entrar("Rui"));*/
+	ASSERT_EQUAL(false, p1.entrar("Rui"));
 }
 
 
