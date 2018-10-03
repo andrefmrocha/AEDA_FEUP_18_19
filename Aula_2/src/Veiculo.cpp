@@ -25,6 +25,14 @@ int Veiculo::getMes() const
 	return mes;
 }
 
+bool Veiculo::operator <(const Veiculo &v) const
+{
+	if(this->ano == v.getAno())
+		return (this->mes < v.getMes());
+	else
+		return (this->ano < v.getAno());
+}
+
 Motorizado::Motorizado(string mc, int m, int a, string c, int cil): Veiculo(mc,m,a),combustivel(c), cilindrada(cil){}
 
 int Motorizado::info() const

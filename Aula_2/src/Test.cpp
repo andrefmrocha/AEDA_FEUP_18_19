@@ -52,12 +52,12 @@ void test_d_InfoFrota() {
 }
 
 void test_e_OperadorMenor() {
-	/*Automovel a1("Fiat",3,2017,"gasolina",1200);
+	Automovel a1("Fiat",3,2017,"gasolina",1200);
 	Camiao c1("Ford",5,2017,"gasolina",1400,1000);
 	Bicicleta b1("XX",4,2018,"TodoTerreno");
 	ASSERT_EQUAL(true, a1<c1);
 	ASSERT_EQUAL(false,b1<c1);
-	ASSERT_EQUAL(true,a1<b1);*/
+	ASSERT_EQUAL(true,a1<b1);
 }
 
 void test_f_OperadorFuncao() {
