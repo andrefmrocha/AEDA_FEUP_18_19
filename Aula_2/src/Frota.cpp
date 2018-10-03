@@ -41,3 +41,14 @@ ostream & operator<<(ostream &o, const Frota &f)
 	}
 	return (o);
 }
+
+vector<Veiculo *> Frota::operator ()(int anoM) const
+{
+	vector<Veiculo *> vecs;
+	for (auto i: this->veiculos)
+	{
+		if(i->getAno() == anoM)
+			vecs.push_back(i);
+	}
+	return vecs;
+}

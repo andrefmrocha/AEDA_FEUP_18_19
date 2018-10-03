@@ -18,7 +18,7 @@ public:
    string getMarca() const;
    virtual int info() const;
    bool operator < (const Veiculo & v) const;
-   //virtual float calcImposto() const = 0;
+   virtual float calcImposto() const = 0;
 };
 
 class Motorizado: public Veiculo {
