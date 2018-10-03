@@ -93,14 +93,14 @@ void test_g_ImpostoVeiculo() {
 }
 
 void test_h_ImpostoFrota() {
-	/*Veiculo *v1 =new Automovel("Fiat",5,1997,"gasolina",1200);
+	Veiculo *v1 =new Automovel("Fiat",5,1997,"gasolina",1200);
 	Veiculo *v2= new Camiao("Ford",3,1999,"gasolina",1400,1000);
 	Veiculo *v3=new Bicicleta("XX",4,2002,"TodoTerreno");
 	Frota f;
 	f.adicionaVeiculo(v1);
 	f.adicionaVeiculo(v2);
 	f.adicionaVeiculo(v3);
-	ASSERT_EQUAL_DELTA(74.21, f.totalImposto(),0.001);*/
+	ASSERT_EQUAL_DELTA(74.21, f.totalImposto(),0.001);
 }
 
 

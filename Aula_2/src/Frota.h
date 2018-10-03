@@ -15,6 +15,7 @@ public:
 	void adicionaVeiculo(Veiculo *v1);
 	int numVeiculos() const;
 	int menorAno() const;
+	float totalImposto() const;
 };
 
 

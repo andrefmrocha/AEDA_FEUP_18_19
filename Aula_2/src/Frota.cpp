@@ -52,3 +52,14 @@ vector<Veiculo *> Frota::operator ()(int anoM) const
 	}
 	return vecs;
 }
+
+float Frota::totalImposto() const
+{
+	float total = 0;
+	for(auto i: this->veiculos)
+	{
+		total+= i->calcImposto();
+	}
+	return total;
+}
+
