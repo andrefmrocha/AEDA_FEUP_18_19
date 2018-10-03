@@ -32,3 +32,12 @@ int Frota::menorAno() const
 	}
 	return ano;
 }
+
+ostream & operator<<(ostream &o, const Frota &f)
+{
+	for (auto i: f.veiculos)
+	{
+		o << i->getMarca() << " do Ano " << i->getAno() << " do Mês " << i->getMes() << "." << endl;
+	}
+	return (o);
+}

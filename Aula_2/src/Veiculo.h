@@ -12,10 +12,11 @@ protected:
    int mes, ano;
 public:
    Veiculo(string mc, int m, int a);
-   //virtual ~Veiculo(){};
+   virtual ~Veiculo(){};
    int getAno() const;
+   int getMes() const;
    string getMarca() const;
-  // virtual int info() const;
+   virtual int info() const;
    bool operator < (const Veiculo & v) const;
    //virtual float calcImposto() const = 0;
 };
@@ -25,7 +26,7 @@ class Motorizado: public Veiculo {
 public:
    Motorizado(string mc, int m, int a,string c,int cil);
    string getCombustivel() const;
-   //virtual int info() const;
+   virtual int info() const;
    float calcImposto() const;
 };
 

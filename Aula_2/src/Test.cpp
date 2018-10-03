@@ -31,24 +31,24 @@ void test_b_CriarFrota() {
 }
 
  void test_c_InfoVeiculo() {
-	/*Automovel a1("Fiat",5,1997,"gasolina",1200);
+	Automovel a1("Fiat",5,1997,"gasolina",1200);
 	Camiao c1("Ford",3,1999,"gasolina",1400,1000);
 	Bicicleta b1("XX",4,2002,"TodoTerreno");
 	ASSERT_EQUAL(5, a1.info());
 	ASSERT_EQUAL(6,c1.info());
-	ASSERT_EQUAL(4,b1.info());*/
+	ASSERT_EQUAL(4,b1.info());
 }
 
 void test_d_InfoFrota() {
-	/*Veiculo *v1 =new Automovel("Fiat",5,2016,"gasolina",1200);
+	Veiculo *v1 =new Automovel("Fiat",5,2016,"gasolina",1200);
  	Veiculo *v2= new Camiao("Ford",3,2017,"gasolina",1400,1000);
  	Veiculo *v3=new Bicicleta("XX",4,2018,"TodoTerreno");
  	Frota f;
  	f.adicionaVeiculo(v1);
  	f.adicionaVeiculo(v2);
  	f.adicionaVeiculo(v3);
- 	ASSERTM("Este teste nunca falha! VERIFICAR informa��o escrita no monitor", true);
- 	cout << f;*/
+ 	ASSERTM("Este teste nunca falha! VERIFICAR informaçao escrita no monitor", true);
+ 	cout << f;
 }
 
 void test_e_OperadorMenor() {
@@ -123,7 +123,3 @@ int main(){
     runSuite();
 }
 
-ostream & operator<<(ostream & o, const Frota & f)
-{
-	return o;
-}
