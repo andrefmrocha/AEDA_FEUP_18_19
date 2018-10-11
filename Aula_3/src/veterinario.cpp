@@ -9,4 +9,13 @@ string Veterinario::getNome() const {
 }
 
 
+string Veterinario::getInformacao() const
+{
+	string info = nome + ", " + to_string(codOrdem);
+	return info;
+}
 
+long Veterinario::getCod() const
+{
+	return this->codOrdem;
+}

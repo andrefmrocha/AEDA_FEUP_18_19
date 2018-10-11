@@ -14,9 +14,13 @@ protected:
 public:
 	Animal(string nome, int idade);
 	virtual ~Animal(){};
+	virtual string getInformacao() const;
 	virtual bool eJovem() const = 0;
 	string getNome() const;
+	int getIdade() const;
 	static int getMaisJovem();
+	void setVet(Veterinario *v1);
+	string getVetName() const;
 };
 
 
@@ -26,7 +30,7 @@ class Cao: public Animal {
 public:
 	Cao(string nome, int idade, string raca);
 	bool eJovem()const;
-
+	string getInformacao() const;
 };
 
 
@@ -37,7 +41,7 @@ class Voador {
 public:
 	Voador(int vmax, int amax);
 	virtual ~Voador(){};
-	//completar
+	virtual string getInformacao() const;
 };
 
 
@@ -45,8 +49,9 @@ public:
 class Morcego: public Animal, public Voador {
 public:
 	Morcego(string nome, int idade, int vmax, int amax);
-	 bool eJovem()const;
-	 };
+	bool eJovem()const;
+	string getInformacao() const;
+ };
 
 
 #endif /* SRC_ANIMAL_H_ */

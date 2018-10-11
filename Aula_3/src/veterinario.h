@@ -10,8 +10,9 @@ class Veterinario {
 	long codOrdem;
 public:
 	Veterinario(string nome, int cod);
+	long getCod() const;
 	string getNome() const;
-	//completar
+	string getInformacao() const;
 };
 
 
