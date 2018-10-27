@@ -45,3 +45,5 @@
 *.eps
 doxygen.sty
 Makefile
+
+Classes/
