@@ -22,7 +22,7 @@ public:
    int getNumPaginas() const;
    float getPercentagemPreto() const;
    float getPercentagemAmarelo() const;
-	// �
+   Documento operator+(Documento doc);
 };
 
 class Impressora {
@@ -37,6 +37,7 @@ public:
 	int getAno() const;
 	vector<Documento> getDocumentosImpressos() const;
 	virtual bool imprime(Documento doc) = 0;
+	virtual bool istonerBaixo() const = 0;
 };
 
 class ImpressoraPB: public Impressora {
@@ -44,7 +45,8 @@ class ImpressoraPB: public Impressora {
 public:
    ImpressoraPB(string cod, int a, int toner);
    int getNumPaginasImprimir() const;
-   virtual bool imprime(Documento doc);
+   bool imprime(Documento doc);
+   bool istonerBaixo() const;
 };
 
 class ImpressoraCores: public Impressora {
@@ -53,7 +55,8 @@ class ImpressoraCores: public Impressora {
 public:
    ImpressoraCores(string cod, int a, int toner);
    int getNumPaginasImprimir() const;
-   virtual bool imprime(Documento doc);
+   bool imprime(Documento doc);
+   bool istonerBaixo() const;
 };
 
 class Funcionario {
@@ -79,6 +82,9 @@ public:
   vector<Impressora *> getImpressoras() const;
   int numImpressorasSemResponsavel() const;
   vector<Impressora *> retiraImpressoras(int ano1);
+  Impressora * imprimeDoc(Documento doc1) const;
+  vector<Impressora *> tonerBaixo() const;
+  string operator()(string printCode) const;
 };
 
 

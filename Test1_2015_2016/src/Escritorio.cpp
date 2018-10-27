@@ -142,6 +142,64 @@ bool ImpressoraCores::imprime(Documento doc)
 	return true;
 }
 
+Impressora * Escritorio::imprimeDoc(Documento doc) const
+{
+	for(auto i: this->impressoras)
+	{
+		if(i->imprime(doc))
+		{
+			return i;
+		}
+	}
+	Impressora* fail = new ImpressoraPB("inexistente", 0, 0);
+	return fail;
+}
+
+bool ImpressoraPB::istonerBaixo() const
+{
+	return this->numPagImprimir < 30;
+}
+
+bool ImpressoraCores::istonerBaixo() const
+{
+	return (this->numPagImprimirAmarelo < 20 || this->numPagImprimirPreto < 20);
+}
+
+vector<Impressora *> Escritorio::tonerBaixo() const
+{
+	vector<Impressora *> printers;
+	for(auto i: this->impressoras)
+	{
+		if(i->istonerBaixo())
+		{
+			printers.push_back(i);
+		}
+	}
+	return printers;
+}
+
+Documento Documento::operator +(Documento doc)
+{
+	int nPag = this->getNumPaginas() + doc.getNumPaginas();
+	float pP = (this->getPercentagemPreto()*this->numPaginas + doc.getPercentagemPreto()*doc.getNumPaginas())/(nPag);
+	float pA = (this->getPercentagemAmarelo()*this->numPaginas + doc.getPercentagemAmarelo()*doc.getNumPaginas())/(nPag);
+	Documento newDoc(nPag, pP, pA);
+	return newDoc;
+}
 
 
+string Escritorio::operator ()(string printCode) const
+{
+	for(auto i: this->funcionarios)
+	{
+		for(auto j: i.getImpressoras())
+		{
+			if(j->getCodigo() == printCode)
+			{
+				return i.getCodigo();
+			}
+		}
+	}
+	return "nulo";
+}
 
