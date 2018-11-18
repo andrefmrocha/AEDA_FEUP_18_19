@@ -1,0 +1,11 @@
+<testsuites>
+	<testsuite name="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" tests="7">
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_A_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_B_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_C_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_D_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_E_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_F_"/>
+		<testcase classname="AEDA 2016/2017 - Avaliacao CI2- 23/nov - Testes Unitarios Estudantes" name="test_G_"/>
+	</testsuite>
+</testsuites>
