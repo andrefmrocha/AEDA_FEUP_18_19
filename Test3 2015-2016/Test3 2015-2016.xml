@@ -1,0 +1,15 @@
+<testsuites>
+	<testsuite name="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" tests="7">
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_A_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_B_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_C_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_D_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_E_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_F_"/>
+		<testcase classname="AEDA 2015/2016 - Avaliacao CI3- 25/nov - Testes Unitarios Estudantes" name="test_G_">
+			<failure message="../src/Test.cpp:337 test_G_: 6 == r.storeGroupedDishes(dry_grouped) expected:	6	but was:	0	">
+test_G_: 6 == r.storeGroupedDishes(dry_grouped) expected:	6	but was:	0	
+			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
