@@ -38,7 +38,12 @@ string Jogo::escreveJogo()
 	string game;
 	while(!it.isAtEnd())
 	{
-		game+= to_string(it.retrieve().getPontuacao())+ "-" + to_string(it.retrieve().getEstado()) + "-" + to_string(it.retrieve().getNVisitas())+"\n";
+		game+= to_string(it.retrieve().getPontuacao())+ "-";
+		if(it.retrieve().getEstado())
+			game+="true";
+		else
+			game+="false";
+		game+= "-" + to_string(it.retrieve().getNVisitas())+"\n";
 		it.advance();
 	}
 	return game;
@@ -47,16 +52,46 @@ string Jogo::escreveJogo()
 
 int Jogo::jogada()
 {
-	// a alterar
-	return 0;
+	int score = 1;
+	int node = 1;
+	BTItrLevel<Circulo> it(this->jogo);
+
+	while(!it.isAtEnd())
+	{
+		Circulo & c = it.retrieve();
+		if(c.getPontuacao() != node)
+		{
+			it.advance();
+			continue;
+		}
+
+		if(c.getEstado())
+			node = node * 2 +1;
+		else
+			node = node * 2;
+		score = c.getPontuacao();
+		c.changeState();
+		++c;
+	}
+	return score;
 }
 
 
 
 int Jogo::maisVisitado()
 {
-	// a alterar
-	return 0;
+	BTItrLevel<Circulo> it(this->jogo);
+	it.advance();
+	int counter = 0;
+	while(!it.isAtEnd())
+	{
+		if(counter < it.retrieve().getNVisitas())
+		{
+			counter = it.retrieve().getNVisitas();
+		}
+		it.advance();
+	}
+	return counter;
 }
 
 

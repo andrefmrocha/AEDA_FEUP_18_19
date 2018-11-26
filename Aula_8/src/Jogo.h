@@ -17,6 +17,8 @@ public:
  bool getEstado() const { return estado; }
  int getNVisitas() const { return nVisitas; }
  friend ostream &operator << (ostream &os, Circulo &c1);
+ void changeState(){this->estado = !this->estado;};
+ Circulo operator++(){this->nVisitas++;};
 };
 
 
