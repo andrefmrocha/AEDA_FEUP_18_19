@@ -34,6 +34,11 @@ bool FilmTime::operator<(const FilmTime & ft1) const
 	return this->getHour() < ft1.getHour();
 }
 
+void FilmTime::setHour(unsigned hour)
+{
+	this->hour = hour;
+}
+
 
 
 

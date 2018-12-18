@@ -14,12 +14,10 @@ using namespace std;
 
 struct hFilmPtr {
 	int operator()(const FilmPtr & f1) const{
-		//TODO:  Implement a correct version of the hash function
-		return -1;
+		return f1.film->getTitle().size()*f1.film->getActors().size();
 	}
 	bool operator()(const FilmPtr & f1, const FilmPtr & f2) const {
-		//TODO: Implement a correct version of the equality function
-		return true;
+		return f1.film->getTitle() == f2.film->getTitle();
 	}
 };
 

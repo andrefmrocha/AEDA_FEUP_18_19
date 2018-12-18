@@ -20,6 +20,7 @@ public:
 	unsigned getRoomID() const;
 	Film* getFilm() const;
 	void setFilm(Film* f);
+	void setHour(unsigned hour);
 	bool operator == (const FilmTime &ft) const;
 
 	bool operator<(const FilmTime & ft1) const;  //TODO: Implement a correct version of the operator
